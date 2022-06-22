@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<DataForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns="http://www.enova.pl/schema/form.xsd"
+          xsi:schemaLocation="http://www.enova.pl/schema/ http://www.enova.pl/schema/form.xsd"
+          RightName="Page:PozytronPage"
+          Priority="5"
+          DataType="Soneta.CRM.Kontrahent,Soneta.CRM">
+	<Page Name="PozytronPage" CaptionHtml="Pozytron" DataContext="{new TreeNodesPozytronExtender}">
+		<Group CaptionHtml="Lokalizacje">
+			<Grid IsToolbarVisible="true" EditValue="{Localizations()}" Width="*" Height="14" NewButton="None" RemoveButton="None">	\
+				<Field CaptionHtml="Kod" Width="20" EditValue="{Kod}" Footer="None"/>
+				<Field CaptionHtml="Nazwa" Width="25" EditValue="{Nazwa}" Footer="None" />				
+				<Field CaptionHtml="Adres" Width="35" EditValue="{Adres}" Footer="None" />
+				<Field CaptionHtml="Klient Abonamentowy" Width="20" EditValue="{Features.KontrahentAbonamentowy}" Footer="None"/>
+			</Grid>
+		</Group>
+		<Group CaptionHtml="Urzadzenia">
+			<Grid IsToolbarVisible="true" EditValue="{Devices()}" Width="*" Height="14" NewButton="None" RemoveButton="None">
+				<Field CaptionHtml="Identyfikator" Width="13" EditValue="{Identyfikator}" Footer="None" />
+				<Field CaptionHtml="Nazwa" Width="20" EditValue="{Nazwa}" Footer="None" />
+				<Field CaptionHtml="Rodzaj" Width="25" EditValue="{Features.Rodzaj}" Footer="None" />				
+				<Field CaptionHtml="Numer seryjny urządzenia" Width="20" EditValue="{Features.Numer seryjny urządzenia}" Footer="None" />
+				<Field CaptionHtml="Rok produkcji" Width="15" EditValue="{Features.Rok produkcji}" Footer="None" />
+				<Field CaptionHtml="numer seryjny lampy" Width="20" EditValue="{Features.numer seryjny lampy}" Footer="None" />
+				<Field CaptionHtml="Aktywne" Width="15" EditValue="{Aktywne}" Footer="None" />
+				
+			</Grid>
+		</Group>
+		<Group CaptionHtml="Umowy i Aneksy">
+			<Grid IsToolbarVisible="true" EditValue="{Contracts()}" Width="*" Height="13" NewButton="None" RemoveButton="None">
+				<Field CaptionHtml="Data" Class="SmartOpen" Width="11" EditValue="{Data}" />
+				<Field CaptionHtml="Numer pelny" Width="16" EditValue="{Numer.NumerPelny}" />
+				<Field CaptionHtml="Odbiorca" Width="30" EditValue="{Odbiorca}" />
+				<Field CaptionHtml="Dane odbiorcy" Width="30" EditValue="{DaneOdbiorcy}" />				
+			</Grid>
+		</Group>
+	</Page>
+</DataForm>
+
